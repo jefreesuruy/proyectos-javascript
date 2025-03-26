@@ -1,0 +1,92 @@
+body{
+    background: #D2E5E9;
+    color: #293239;
+    margin: 0;
+}
+
+div::-webkit-scrollbar { /*ocultar barra scroll*/ 
+    display: none;
+}
+
+section{
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100vh;
+}
+
+div{
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.month{
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: center;
+    display: grid;
+    grid-template-rows: 80px;
+}
+
+ol{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    margin: 0;
+    padding: 0px;
+    text-align: center;
+    max-width: 100vw;
+    grid-template-rows: 50px;
+}
+
+li{
+    font-size: 1.5ch;
+}
+
+h2{
+    margin-bottom: 4px;
+    padding: 0;
+}
+
+.first-day{
+    grid-column-start: var(--first-day-start)
+}
+
+.day-name{
+    background: #293239;
+    color: #D2E5E9;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#down{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    border: 0;
+    border-radius: 50%;
+    color: #D2E5E9 ;
+    background: #293239;
+    text-align: center;
+    cursor: pointer;
+}
+
+#up{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 5px;
+    right: 60px;
+    border: 0;
+    border-radius: 50%;
+    color: #D2E5E9 ;
+    background: #293239;
+    text-align: center;
+    cursor: pointer;
+}
